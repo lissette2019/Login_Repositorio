@@ -1,4 +1,24 @@
-    
+<?php
+        //inicializar sesion
+        session_start();
+
+        require 'BaseDatos.php';
+
+        if (isset($_SESSION['user_id'])) {
+            $records = $conn->prepare('SELECT id, email, password FROM usuario WHERE id = :id');
+            $records->bindParam(':id', $_SESSION['user_id']);
+            $records->execute();
+            $results = $records->fetch(PDO::FETCH_ASSOC);
+
+            $user = null;
+
+            //verificacion de resultados sean mayor a cero
+
+            if (count($results) > 0) {
+            $user = $results;
+            }
+        }
+?>    
         <!DOCTYPE html>
         <html>
         <head>
