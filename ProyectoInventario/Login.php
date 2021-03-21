@@ -41,26 +41,57 @@
             <link rel="stylesheet" type="text/css" href="assets/css/style.css">       
         </head>
         <body>
-            <div class="container" id='login'>
-                <div class="panel panel-primary">
-                    <div class="panel-heading text-center">
-                    <h1>Login</h1>
-                    </div>
-                </div>
-            </div>
-            <div class="panel-body">
-                <h4>Usuario</h4>
-                <input class="form-control" name="email" type="text" placeholder="coloca tu correo"><br>
-                <h4>contraseña</h4>
-                <input class="form-control" name="password" type="password" placeholder="ingresa tu contraseña"><br>
-            </div>
-            <div class="panel-footer">
-                <button class="btn-info">Ingresar</button>
-                <button class="btn-info">Registrate</a></button>
-            </div>
+        <body>
 
+<header id="main-header">
 
-        </body>
+<a id="logo-header" href="/assets/Imagenes/LOGO INVENTARIO.png">
+    <span class="site-name">HOSPITAL MILITAR CENTRAL</span><br>
+    <span class="site-desc">Diseño de Inventario</span>
+</a> <!-- / #logo-header -->
+
+<nav>
+    <ul>
+        <li><a href="index.php">Inicio</a></li>
+        <li><a href="Registro.php">Registro</a></li>
+        <li><a href="CerrarSesion.php">Salir</a></li>
+    </ul>
+</nav><!-- / nav -->
+
+</header><!-- / #main-header -->
+
+    
+<div class="login-wrap">
+    <div class="login-html">
+    <div class="container">
+            <h1>Iniciar Sesion</h1>
+            </div>
+        </div>
+<div class="login-form">
+    <div class="sign-in-htm">
+        <div class="group">
+            <label for="user" class="label">Nombre de usuario</label>
+            <input id="user" type="text" class="input">
+        </div>
+        <div class="group">
+            <label for="pass" class="label">Contraseña</label>
+            <input id="pass" type="password" class="input" data-type="password">
+        </div>
+        <div class="group">
+            <input id="check" type="checkbox" class="check" checked>
+            <label for="check"><span class="icon"></span> Mantenerme conectado</label>
+        </div>
+        <div class="group">
+            <input type="submit" class="button" value="Registrarse">
+        </div>
+        <div class="hr"></div>
+        <div class="foot-lnk">
+            <a href="#forgot">
+                ¿Has olvidado tu contraseña?</a>
+        </div>
+    </div>
+
+</body>
     </html>
 
 
