@@ -1,5 +1,32 @@
+<?php
+            //inicializar sesion
+        session_start();
+
+        if (isset($_SESSION['user_id'])) {
+            header('Location: /php-Login');
+        }
+        require 'BaseDatos.php';
+
+        if (!empty($_POST['email']) && !empty($_POST['password'])) {
+            $records = $conn->prepare('SELECT id, email, password FROM Usuario WHERE email = :email');
+            $records->bindParam(':email', $_POST['email']);
+            $records->execute();
+            $results = $records->fetch(PDO::FETCH_ASSOC);
+
+            $message = '';
+
+            if (count($results) > 0 && password_verify($_POST['password'], $results['password'])) {
+            $_SESSION['user_id'] = $results['id'];
+            header("Location: /php-Login");
+            } else {
+            $message = 'Lo siento, esas credenciales no coinciden';
+            }
+        }
+
+?>
 
 <!DOCTYPE html>
+
     <html>
         <head>
             <meta charset="utf-8">
@@ -35,3 +62,5 @@
 
         </body>
     </html>
+
+
