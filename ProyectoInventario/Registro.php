@@ -12,18 +12,52 @@
     </head>
     <body>
 
-        <h1>Registrarse</h1>
-        <span> or <a href="Registro.php">Registro</a></span>
+        <header id="main-header">
+                    
+                    <a id="logo-header" href="/assets/Imagenes/LOGO INVENTARIO.png">
+                        <span class="site-name">HOSPITAL MILITAR CENTRAL</span><br>
+                        <span class="site-desc">Diseño de Inventario</span>
+                    </a> <!-- / #logo-header -->
 
-        <form action="Registro.php" method="post">
-            <input type="text" name="email" placeholder="Ingrese su correo">
-            <input type="password" name="password" value="" placeholder="Ingresa tu contraseña">
-            <input type="password" name="confirm_password" placeholder="Confirmar  contraseña">
-            <input type="submit" value="send">
+                    <nav>
+                        <ul>
+                            <li><a href="index.php">Inicio</a></li>
+                            <li><a href="CerrarSesion.php">Salir</a></li>
+                        </ul>
+                    </nav><!-- / nav -->
+            </header><!-- / #main-header -->
 
+            <h1>Registrarse</h1><br>
+            
 
-    </form>
+            <div class="sign-up-htm">
+                    <div class="group">
+                        <label for="user" class="label">Nombre de usuario</label>
+                        <input id="user" type="text" class="input">
+                    </div>
+                    <div class="group">
+                        <label for="pass" class="label">Contraseña</label>
+                        <input id="pass" type="password" class="input" data-type="password">
+                    </div>
+                    <div class="group">
+                        <label for="pass" class="label">Repite la contraseña</label>
+                        <input id="pass" type="password" class="input" data-type="password">
+                    </div>
+                    <div class="group">
+                        <label for="pass" class="label">Dirección de correo electrónico</label>
+                        <input id="pass" type="text" class="input">
+                    </div>
+                    <div class="group">
+                        <input type="submit" class="button" value="Inscribirse">
+                    </div>
+                    <div class="hr"></div>
+                    <div class="foot-lnk">
+                        <label for="tab-1">¿Ya tienes cuenta?</a><br>
+                        <span> or <a href="Login.php">Iniciar Sesion</a></span>
+                    </div>
 
-        
-    </body>
+        </form>
+
+            
+        </body>
 </html>
