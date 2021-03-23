@@ -30,39 +30,41 @@
     <html>
         <head>
             <meta charset="utf-8">
-               
+                <!-- Latest compiled and minified CSS -->
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+            <!-- Optional theme -->
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+            <!-- Latest compiled and minified JavaScript -->
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
             <link rel="stylesheet" type="text/css" href="assets/css/style.css">       
         </head>
         <body>
-        <?php if(!empty($message)): ?>
-            <p> <?= $message ?></p>
-            <?php endif; ?>
-                <header id="main-header">
-                
-                <a id="logo-header" href="/assets/Imagenes/LOGO INVENTARIO.png">
-                    <span class="site-name">HOSPITAL MILITAR CENTRAL</span><br>
-                    <span class="site-desc">Diseño de Inventario</span>
-                </a> <!-- / #logo-header -->
+        <header id="main-header">
+		
+		<a id="logo-header" href="/assets/css/Imagenes/LOGO INVENTARIO>png">
+			<span class="site-name">Hospital Militar Central</span>
+			<span class="site-desc">Diseño web del Inventario Local</span>
+		</a> <!-- / #logo-header -->
 
-                <nav>
-                    <ul>
-                        <li><a href="index.php">Inicio</a></li>
-                        <li><a href="Registro.php">Registro</a></li>
-                        <li><a href="CerrarSesion.php">Salir</a></li>
-                    </ul>
-                </nav><!-- / nav -->
+		<nav>
+			<ul>
+				<li><a href="/index.php">Inicio</a></li>
+				<li><a href="/Registro.php">Registrarse</a></li>
+				<li><a href="/CerrarSesion.php">Salir</a></li>
+			</ul>
+		</nav><!-- / nav -->
 
-            </header><!-- / #main-header -->
-
-                    
-                <div class="login-wrap">
-                    <div class="login-html">
-                            <h1>Iniciar Sesion</h1>
-                            </div>
-                        </div>
-                <div class="login-form">
-                    <div class="sign-in-htm">
-                        <div class="group">
+	</header><!-- / #main-header -->
+            <div class="container" id='login'>
+                <div class="panel panel-primary">
+                    <div class="panel-heading text-center">
+                    <h1>Login</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="group">
                             <label for="user" class="label">Nombre de usuario</label>
                             <input id="user" type="text" class="input">
                         </div>
@@ -81,8 +83,11 @@
                         <div class="foot-lnk">
                             <a href="#forgot">
                                 ¿Has olvidado tu contraseña?</a>
-                        </div>
-                    </div>
+                        
+                </div>
+            <footer id="main-footer">
+		<p>&copy; 2021 <a href="https://www.fuerzaarmada.mil.sv/?page_id=751">Hospital Militar Central</a></p>
+	</footer> <!-- / #main-footer -->
 
         </body>
     </html>
